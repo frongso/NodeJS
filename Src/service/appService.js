@@ -9,9 +9,23 @@ var sql = require('../database/dbConnection');
 //   this.lastname = user.lastname;
 // };
 
-exports.getData = function (req, res) {
-  sql.query('SELECT * FROM msm_user', function (err, rows) {
-    console.log('Getting data');
-    res.send(rows);
-  });
-}; 
+// exports.getData = function () {
+//   sql.query('SELECT * FROM msm_user', function (err, rows) {
+//     console.log('Getting data');
+//     this.send(rows);
+//   });
+// };
+
+console.log('select service'); // debug
+
+module.exports = {
+  getData: function (req, res) {
+    console.log('hello');
+    res.send('hello');
+    // sql.query('SELECT * FROM msm_user', function (err, rows) {
+    //   console.log('Getting data');
+    //   console.log(rows);
+    //   res.send(rows);
+    // })
+  }
+};

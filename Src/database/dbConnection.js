@@ -8,8 +8,10 @@ var mysql_conn = mysql.createConnection({
   database: 'shopping_mall'
 });
 
+console.log('get data from db'); // debug
+
 mysql_conn.connect(function (err) {
   if (err) throw err;
-}));
+});
 
 module.exports = mysql_conn;
