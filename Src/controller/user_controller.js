@@ -1,5 +1,5 @@
 module.exports = function (app) {
-  var service = require('../service/appService');
+  var service = require('../service/user_service');
 
   console.log('select routes'); // debug
 

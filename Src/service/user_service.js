@@ -21,11 +21,10 @@ console.log('select service'); // debug
 module.exports = {
   getData: function (req, res) {
     console.log('hello');
-    res.send('hello');
-    // sql.query('SELECT * FROM msm_user', function (err, rows) {
-    //   console.log('Getting data');
-    //   console.log(rows);
-    //   res.send(rows);
-    // })
+    sql.query('SELECT * FROM msm_user', function (err, rows) {
+      console.log('Getting data');
+      res.send(rows);
+    })
   }
+
 };
